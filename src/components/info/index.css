@@ -140,23 +140,23 @@
         margin: 20px 0;
     }
 
-    .leftTopHome {
+    .leftInfo {
         flex-direction: column;
         align-items: center;
         text-align: center;
         flex: 1 1;
     }
 
-    .infoTopHome {
+    .info {
         align-items: center;
         margin-top: 15px;
     }
 
-    .itemTopHome {
+    .itemInfo {
         justify-content: center;
     }
 
-    .rightTopHome {
+    .rightInfo {
         grid-template-columns: 1fr;
         width: 100%;
     }

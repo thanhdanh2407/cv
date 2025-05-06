@@ -5,14 +5,16 @@ import InfoPage from "../components/info/infoPage";
 
 function AboutPage() {
   return (
-    <div className="containerAbout">
-      <div className="wrapperAbout">
+    <div className="container">
+      <div className="wrapper">
         <InfoPage />
-        <div className="containerBottomAbout">
-          <div className="leftBottomAbout">
+        <div className="containerBottom">
+          <div className="leftBottom">
             <SideBar />
           </div>
-          <div className="rightBottomAbout"></div>
+          <div className="rightBottom">
+            <span>About me</span>
+          </div>
         </div>
       </div>
     </div>
