@@ -1,14 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import HomePage from "./layouts/home";
+import Header from "./layouts/header";
+import Footer from "./layouts/footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
