@@ -1,8 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import HomePage from "./layouts/home";
 import Header from "./layouts/header";
 import Footer from "./layouts/footer";
+import ResumePage from "./layouts/resume";
+import ContactPage from "./layouts/contact";
+import ActivitiesPage from "./layouts/activities";
+import AboutPage from "./layouts/about";
 
 function App() {
   return (
@@ -10,7 +13,10 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<AboutPage />} />
+          <Route path="/resume" element={<ResumePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/activities" element={<ActivitiesPage />} />
         </Routes>
         <Footer />
       </div>
