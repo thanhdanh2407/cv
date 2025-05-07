@@ -7,6 +7,7 @@
     width: 100%;
     padding: 30px;
     gap: 30px;
+    margin-top: -150px;
 }
 
 .leftInfo {
@@ -131,6 +132,7 @@
     .containerInfo {
         flex-direction: column;
         align-items: center;
+        margin-top: -110px;
     }
     .divider {
         width: 100%;

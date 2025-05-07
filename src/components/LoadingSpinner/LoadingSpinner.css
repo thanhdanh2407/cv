@@ -1,0 +1,33 @@
+.spinner-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(rgba(59, 130, 246, 1) 0deg,
+            rgba(59, 130, 246, 0.8) 60deg,
+            rgba(59, 130, 246, 0.2) 120deg,
+            rgba(59, 130, 246, 0.05) 240deg,
+            rgba(59, 130, 246, 0.3) 360deg);
+    animation: rotate 1s linear infinite;
+    mask-image: radial-gradient(circle, transparent 50%, black 51%);
+    -webkit-mask-image: radial-gradient(circle, transparent 50%, black 51%);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
