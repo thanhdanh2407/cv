@@ -1,0 +1,112 @@
+.tab-bar {
+    display: none;
+    /* Mặc định ẩn */
+}
+
+.tab-item {
+    background-color: #e9ecef;
+    border-radius: 16px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+}
+
+.tab-item:hover {
+    background-color: #e6edff;
+    box-shadow: 0 4px 12px rgba(49, 107, 255, 0.2);
+}
+
+.tab-item.active {
+    background-color: transparent;
+    color: #1655f4;
+}
+
+.tab-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+    color: #a2a2a2;
+}
+
+.tab-item.active .tab-icon {
+    color: #1655f4;
+}
+
+.tab-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #272727;
+}
+
+.tab-item.active .tab-label {
+    color: #1655f4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tab-bar {
+        display: flex;
+        /* ✅ Thêm dòng này để hiện thanh TabBar */
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        padding: 10px 0;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #ddd;
+        z-index: 1000;
+    }
+
+    .tab-item {
+        background-color: transparent;
+        box-shadow: none;
+        width: 70px;
+        height: auto;
+        border-radius: 0;
+        padding: 5px;
+        color: #6b7280;
+        font-size: 12px;
+        font-weight: 600;
+        position: relative;
+    }
+
+    .tab-icon {
+        font-size: 20px;
+        margin-bottom: 4px;
+        color: inherit;
+    }
+
+    .tab-item.active::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #3b82f6;
+        border-radius: 1px;
+    }
+
+    .tab-item.active .tab-icon,
+    .tab-item.active .tab-label {
+        color: #3b82f6;
+    }
+
+    .tab-label {
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+}

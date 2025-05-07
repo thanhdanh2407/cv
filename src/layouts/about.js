@@ -2,6 +2,7 @@ import React from "react";
 
 import SideBar from "../components/sidebar/SideBar";
 import InfoPage from "../components/info/infoPage";
+import TabBar from "../components/TabBar/TabBar";
 
 function AboutPage() {
   return (
@@ -17,6 +18,7 @@ function AboutPage() {
           </div>
         </div>
       </div>
+      <TabBar />
     </div>
   );
 }
