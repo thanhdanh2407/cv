@@ -16,13 +16,31 @@ function InfoPage() {
           <div className="status">Software Developer</div>
           <ul className="itemInfo">
             <li>
-              <VscGithubAlt className="iconGit" />
+              <a
+                href="https://github.com/thanhdanh2407"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <VscGithubAlt className="iconGit" />
+              </a>
             </li>
             <li>
-              <SlSocialLinkedin className="iconLinked" />
+              <a
+                href="https://www.linkedin.com/in/danh-ho%C3%A0ng-ph%C3%BA-th%C3%A0nh-615053220/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SlSocialLinkedin className="iconLinked" />
+              </a>
             </li>
             <li>
-              <SlSocialFacebook className="iconFace" />
+              <a
+                href="https://www.facebook.com/24thang07"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SlSocialFacebook className="iconFace" />
+              </a>
             </li>
           </ul>
         </div>

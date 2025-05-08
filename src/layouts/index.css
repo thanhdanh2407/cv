@@ -175,6 +175,22 @@ h3,h2,h1{
     margin-bottom: 10px;
 }
 
+.project-logos-slider {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.project-logo-img {
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
 @media (max-width: 768px) {
     .leftBottom {
         display: none;
@@ -183,5 +199,17 @@ h3,h2,h1{
     .tab-bar{
         display: none;
     }
+
+    .project-logos-slider{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project-logo-img{
+        height: 200px;
+    }
 }
+
+
+
 

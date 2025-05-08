@@ -5,6 +5,10 @@ import TabBar from "../components/TabBar/TabBar";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 import "./index.css";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+
 function AboutPage() {
   const [loading, setLoading] = useState(true);
 
@@ -108,6 +112,38 @@ function AboutPage() {
                 </div>
               </div>
               <h2>Dự Án</h2>
+              <div className="project-logos-slider">
+                <Swiper
+                  spaceBetween={20}
+                  loop={true}
+                  autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  }}
+                  breakpoints={{
+                    320: { slidesPerView: 1 },
+                    480: { slidesPerView: 2 },
+                    640: { slidesPerView: 3 },
+                    1024: { slidesPerView: 4 },
+                  }}
+                  modules={[Autoplay]}
+                >
+                  {[
+                    "https://yte.viettel.vn/upload/1000337/20210118/Viettel-without_slogan-01_34bf1bf614.png",
+                    "https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-HDBank.png",
+                    "https://upload.wikimedia.org/wikipedia/vi/thumb/b/b0/Logo_v2_c%E1%BB%A7a_PV_Oil.png/640px-Logo_v2_c%E1%BB%A7a_PV_Oil.png",
+                    "https://startupwheel.vn/wp-content/uploads/2021/04/hutech-university-logo.jpg",
+                  ].map((src, index) => (
+                    <SwiperSlide key={index}>
+                      <img
+                        src={src}
+                        alt={`project-${index}`}
+                        className="project-logo-img"
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </div>
         </div>
