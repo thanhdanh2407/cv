@@ -32,9 +32,9 @@ function AboutPage() {
             <SideBar />
           </div>
           <div className="rightBottom">
-            <div className="about-container">
+            <div className="containerRight">
               <h1 className="titlePage">About Me</h1>
-              <div className="about-underline"></div>
+              <div className="underline"></div>
               <p>
                 Hello, I'm Danh, a frontend developer with 1 year of experience
                 in building responsive and user-friendly web interfaces. I

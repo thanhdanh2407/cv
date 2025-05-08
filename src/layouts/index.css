@@ -97,7 +97,7 @@
     border-radius: 10px;
 }
 
-.about-container{
+.containerRight{
     display: flex;
     flex-direction: column;
     padding: 10px
@@ -112,7 +112,7 @@
 }
 
 
-.about-underline {
+.underline {
     height: 5px;
     width: 145px;
     background: linear-gradient(to right, #fbbf24, #3b82f6);
@@ -211,5 +211,102 @@ h3,h2,h1{
 }
 
 
+/* Contact.js */
 
+
+
+.inputContact{
+    display: flex;
+    padding: 10px;
+    gap: 40px;
+}
+
+.inputWrapper {
+    flex: 1;
+    min-width: 200px;
+}
+
+.inputFullName,
+.inputEmail {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #F7F9FA;
+    border-radius: 15px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #F7F9FA;
+}
+
+.inputFullName:focus,
+.inputEmail:focus ,
+.textareaContact:focus{
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.textareaWrapper {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.textareaContact {
+    width: 100%;
+    height: 150px;
+    padding: 12px 16px;
+    border-radius: 15px;
+    border: 1px solid #F7F9FA;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    resize: none;
+    background-color: #F7F9FA;
+}
+
+
+.inputFullName::placeholder,
+.inputEmail::placeholder,
+.textareaContact::placeholder {
+    color: #999;
+    font-size: 15px;
+    opacity: 1;
+    font-family: "Poppins", sans-serif;
+}
+
+.btnSubmit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 190px;
+    height: 50px;
+}
+
+.btnSubmit:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btnSubmit:active {
+    background-color: #004494;
+    transform: translateY(0);
+}
+
+.btnIcon {
+    font-size: 18px;
+}
+.submitWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
 
