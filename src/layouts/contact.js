@@ -6,12 +6,18 @@ import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 
 import "./index.css";
 
+import emailjs from "emailjs-com";
+
 import { BsSendFill } from "react-icons/bs";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function ContactPage() {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
 
@@ -23,19 +29,64 @@ function ContactPage() {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleSubmit = () => {
-    setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      toast.success("Gửi thành công!", {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!fullName.trim() || !email.trim() || !message.trim()) {
+      toast.error("Vui lòng điền đầy đủ thông tin.", {
         position: "top-center",
         autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
       });
-    }, 1000);
+      return; // Dừng lại, không gửi
+    }
+
+    setLoading(true);
+
+    const templateParams = {
+      fullName,
+      email,
+      message,
+    };
+
+    emailjs
+      .send(
+        "service_t9fat9d",
+        "template_20k031h",
+        templateParams,
+        "-Hk5w4GP3qgXGvIO1"
+      )
+      .then(
+        (response) => {
+          toast.success("Gửi thành công!", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+
+          setFullName("");
+          setEmail("");
+          setMessage("");
+
+          setSubmitting(false);
+          setLoading(false);
+        },
+
+        (error) => {
+          toast.error("Có lỗi xảy ra, vui lòng thử lại.", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+          setSubmitting(false);
+          setLoading(false);
+        }
+      );
   };
 
   return (
@@ -57,6 +108,8 @@ function ContactPage() {
                     <div className="inputWrapper">
                       <input
                         type="text"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
                         required
                         placeholder="Full Name"
                         className="inputFullName"
@@ -65,6 +118,8 @@ function ContactPage() {
                     <div className="inputWrapper">
                       <input
                         type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                         placeholder="Email"
                         className="inputEmail"
@@ -73,6 +128,8 @@ function ContactPage() {
                   </div>
                   <div className="textareaWrapper">
                     <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       className="textareaContact"
                       placeholder="Your message..."
                     />

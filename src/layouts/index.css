@@ -232,6 +232,7 @@ h4,h3,h2,h1{
     outline: none;
     transition: border-color 0.3s ease;
     background-color: #F7F9FA;
+    font-family: "Poppins", sans-serif;
 }
 
 .inputFullName:focus,
@@ -239,6 +240,7 @@ h4,h3,h2,h1{
 .textareaContact:focus{
     border: 1px solid #ccc;
     background-color: white;
+    font-family: "Poppins", sans-serif;
 }
 
 .textareaWrapper {
@@ -375,7 +377,7 @@ h4,h3,h2,h1{
     position: absolute;
     top: 37px;
     left: 5px;
-    width: 2px;
+    width: 1px;
     height: calc(100% - 50px);
     background-color: #dcdcdc;
     z-index: 1;
@@ -469,3 +471,7 @@ strong{
         line-height: 1.5;
     }
 }
+
+
+
+
