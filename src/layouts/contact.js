@@ -28,7 +28,7 @@ function ContactPage() {
     setTimeout(() => {
       setSubmitting(false);
       toast.success("Gửi thành công!", {
-        position: "top-right",
+        position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,

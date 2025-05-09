@@ -111,7 +111,7 @@ function AboutPage() {
                   <p>Framework for React to build modern web applications</p>
                 </div>
               </div>
-              <h2>Dự Án</h2>
+              <h2>Group Project</h2>
               <div className="project-logos-slider">
                 <Swiper
                   spaceBetween={20}
@@ -132,7 +132,7 @@ function AboutPage() {
                     "https://yte.viettel.vn/upload/1000337/20210118/Viettel-without_slogan-01_34bf1bf614.png",
                     "https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-HDBank.png",
                     "https://upload.wikimedia.org/wikipedia/vi/thumb/b/b0/Logo_v2_c%E1%BB%A7a_PV_Oil.png/640px-Logo_v2_c%E1%BB%A7a_PV_Oil.png",
-                    "https://startupwheel.vn/wp-content/uploads/2021/04/hutech-university-logo.jpg",
+                    "https://media.loveitopcdn.com/3807/logo-hutech-1.png",
                   ].map((src, index) => (
                     <SwiperSlide key={index}>
                       <img
