@@ -179,3 +179,28 @@
         display: none;
     }
 }
+
+.toggle-theme-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.toggle-theme-btn:hover {
+    background: #0056b3;
+}
+
+body.light {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #fff;
+}
