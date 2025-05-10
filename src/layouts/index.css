@@ -28,7 +28,6 @@
 .footer {
     text-align: center;
     padding: 15px 10px;
-    background-color: #f1f1f1;
     font-size: 14px;
     color: #333;
     line-height: 1.4;
@@ -469,6 +468,7 @@ strong{
         overflow: hidden;
         text-overflow: ellipsis;
         line-height: 1.5;
+        line-clamp: 2;
     }
 }
 

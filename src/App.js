@@ -6,6 +6,7 @@ import ResumePage from "./layouts/resume";
 import ContactPage from "./layouts/contact";
 import ActivitiesPage from "./layouts/activities";
 import AboutPage from "./layouts/about";
+import NavButton from "./components/navButton/NavButton";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/activities" element={<ActivitiesPage />} />
         </Routes>
         <Footer />
+        <NavButton />
       </div>
     </Router>
   );
