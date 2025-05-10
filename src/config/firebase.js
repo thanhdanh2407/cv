@@ -2,20 +2,18 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 // Cấu hình Firebase của bạn
+
 const firebaseConfig = {
-  apiKey: "AIzaSyD73WUq0gbzuMbbmPQGbscbqiw-MMMDUcE",
-  authDomain: "webcv-dace5.firebaseapp.com",
-  projectId: "webcv-dace5",
-  storageBucket: "webcv-dace5.firebasestorage.app",
-  messagingSenderId: "240497253919",
-  appId: "1:240497253919:web:ed49cc5ab6f8af3784ff2a",
-  measurementId: "G-88MGVPXDDD",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
-// Khởi tạo Firebase
 const app = initializeApp(firebaseConfig);
-
-// Khởi tạo Firestore
 const db = getFirestore(app);
 
 export { db };

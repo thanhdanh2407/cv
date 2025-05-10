@@ -50,10 +50,10 @@ function ContactPage() {
 
     emailjs
       .send(
-        "service_t9fat9d",
-        "template_20k031h",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         templateParams,
-        "-Hk5w4GP3qgXGvIO1"
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then(
         (response) => {
